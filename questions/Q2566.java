@@ -30,7 +30,7 @@ public class Q2566 {
             String line = br.readLine();
             for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = Integer.parseInt(line.split(" ")[j]);
-                if (max <= matrix[i][j]) {
+                if (max <= matrix[i][j]) { // 해당 부분이 < 일 경우 틀리는 이유에 대해 모르겠음
                     max = matrix[i][j];
                     row = i+1;
                     col = j+1;
