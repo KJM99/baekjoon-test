@@ -1,3 +1,5 @@
+package questions;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -23,41 +25,35 @@ public class Q2738 {
         String matrix = br.readLine();
         int N = Integer.parseInt(matrix.split(" ")[0]);
         int M = Integer.parseInt(matrix.split(" ")[1]);
+
         int[][] mat = new int[N][M];
         int[][] rix = new int[N][M];
 
-        int i;
-        int i;
-        for(i = 0; i < N; ++i) {
+        for (int i = 0; i < N; i++) {
             matrix = br.readLine();
-
-            for(i = 0; i < M; ++i) {
-                mat[i][i] = Integer.parseInt(matrix.split(" ")[i]);
+            for (int j = 0; j < M; j++) {
+                mat[i][j] = Integer.parseInt(matrix.split(" ")[j]);
             }
         }
 
-        for(i = 0; i < N; ++i) {
+        for (int i = 0; i < N; i++) {
             matrix = br.readLine();
-
-            for(i = 0; i < M; ++i) {
-                rix[i][i] = Integer.parseInt(matrix.split(" ")[i]);
+            for (int j = 0; j < M; j++) {
+                rix[i][j] = Integer.parseInt(matrix.split(" ")[j]);
             }
         }
-
         int[][] result = new int[N][M];
 
-        int j;
-        for(i = 0; i < N; ++i) {
-            for(j = 0; j < M; ++j) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
                 result[i][j] = mat[i][j] + rix[i][j];
             }
         }
 
-        for(i = 0; i < N; ++i) {
-            for(j = 0; j < M; ++j) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
                 System.out.print(result[i][j] + " ");
             }
-
             System.out.println();
         }
 
